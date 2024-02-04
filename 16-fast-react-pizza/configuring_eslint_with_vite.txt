@@ -1,0 +1,30 @@
+//========== Pre requsites ==============//
+> Create vite app:
+    -npm create vite@4 || npm create vite@latest
+    -Provide project name
+    -Select react
+    -Select javaScript
+
+> Install node modules:
+    -npm i || npm install
+
+//========== Eslint Setup ==============//
+-Make sure you have ESlint extension installed
+-npm i eslint vite-plugin-eslint eslint-config-react-app --save-dev
+-Make file .eslintrc.json
+
+> Add given text in file:
+    {
+        "extends": "react-app"
+    }
+    #Above will tell ESlint that we want to use previously installed configuration rules which are eslint-config-react-app
+
+
+> Changes in vite.config.js:
+    #This is file where we can change all settings related to vite application itself.
+    -Add following:
+        -import eslint from "vite-plugin-eslint";
+        -pass eslint to plugins in file as guided below 
+            #before >> after
+            plugins: [react()], >> plugins: [react(), eslint()],
+      
